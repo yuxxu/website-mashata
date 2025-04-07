@@ -1,0 +1,207 @@
+:root {
+    --biru-gelap: #3674B5;
+    /* rgb(54,116,181) */
+
+    --biru-mid: #578FCA;
+    /* rgb(87,143,202) */
+
+    --biru-terang: #A1E3F9;
+    --biru-highlight: #D1F8EF;
+    --putih-terang: #f4f1ea;
+    --putih-gelap: #F2EFE7;
+    --putih-hover: #e5e1d6;
+}
+
+#page-one{
+    height: 35em;
+    /* border: 1px solid #000; */
+    margin-top: 100px;
+}
+
+.title {
+    /* border: 1px solid #ea2424; */
+    font-family: "Poppins", serif;
+    width: 100%;
+    padding: 20px 90px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--biru-gelap);
+}
+
+.inner-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 90%;
+    align-items: flex-start;
+    /* border: 1px solid #000; */
+    justify-content: space-between;
+}
+
+.section-left {
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}   
+
+.select {
+    /* border: 1px solid #000; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+select {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: var(--biru-gelap);
+    box-shadow: 0px 4px 6px rgba(52, 88, 146, 0.06);
+    background-color: var(--putih-terang);
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #000; */
+    justify-content: space-between;
+}
+
+.stat-card {
+    display: flex;
+    box-shadow: 0px 4px 15px rgba(52, 88, 146, 0.131);
+    background-color: var(--putih-terang);
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    padding: 0 20px;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+    transition: .4s ease;
+}
+
+.stat-card:hover{
+    background-color: #e5e1d6;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.stat-card h2 {
+    margin-bottom: -10px;
+    color: var(--biru-gelap);
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 17px;
+}
+.stat-card p{
+    color: var(--biru-gelap);
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    background: var(--biru-mid);
+    color: var(--putih-gelap);
+    transition: .4s ease;
+
+}
+
+table tr:nth-child(even) {
+    background: var(--putih-terang);
+    transition: .4s ease;
+
+}
+
+table tr:hover {
+    background: var(--putih-hover);
+    transition: .4s ease;
+}
+
+td {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: var(--biru-gelap);
+}
+
+@media (max-width: 768px) { 
+
+    .container {
+        height: 35em;
+        /* margin-top: 200px; */
+        margin-bottom: 200px;
+    }
+
+    .inner-content {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+    }
+
+    .stat-card {
+        display: flex;
+        /* border: 1px solid #000; */
+        border-radius: 10px;
+        padding: 0 20px;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .stat-card:hover{
+        background-color: #e5e1d6;
+        transition: 0.4s ease;
+        cursor: pointer;
+    }
+    
+    .stat-card h2 {
+        margin-bottom: -20px;
+        color: var(--biru-gelap);
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 25px;
+    }
+    .stat-card p{
+        color: var(--biru-gelap);
+        font-family: "Poppins", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+    }
+}

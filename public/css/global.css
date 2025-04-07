@@ -1,0 +1,440 @@
+:root {
+    --biru-gelap: #3674B5;
+    /* rgb(54,116,181) */
+
+    --biru-mid: #578FCA;
+    /* rgb(87,143,202) */
+
+    --biru-terang: #A1E3F9;
+    --biru-highlight: #D1F8EF;
+    --putih-terang: #f4f1ea;
+    --putih-gelap: #F2EFE7;
+}
+
+@media (max-width: 768px) {
+    .menu {
+      display: block;
+    }
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    background-color: var(--putih-gelap);
+}
+
+/* NAV START */
+
+header {
+    position:fixed;
+    /* border: 1px solid #000; */
+    top: 0;
+    width: 100%;    
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+#header {
+    transition: opacity 0.4s ease;
+    /* background: linear-gradient(0deg, rgba(242,239,231,0) 0%, rgba(242,239,231,1) 140%); */
+
+}
+
+#header.scrolled {
+    background: linear-gradient(0deg, rgba(242,239,231,0) 0%, rgba(242, 239, 231, 0) 100%);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4em;
+    border-radius: 10px;
+    background: rgba(87, 143, 202, 0);
+    /* border: 1px solid #000; */ 
+    margin: 0px 50px 0px 50px;
+    z-index: 1000;
+    padding: 10px 20px; /* Efek mengecil sedikit */
+    transition: padding 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), 
+            background-color 0.4s ease, 
+            color 0.4s ease;
+}
+
+#navbar.scrolled {
+    background: var(--biru-mid);
+    box-shadow: 0 5px 20px rgba(43, 69, 110, 0.377);
+    padding: 2px 5px; /* Efek mengecil sedikit */
+}
+
+#navbar a {
+    transition: .4 ease;
+    color: var(--biru-gelap);
+}
+
+#navbar.scrolled a {
+    color: var(--putih-gelap);
+}
+
+#navbar svg path {
+    transition: fill 0.4s ease;
+    fill: var(--biru-gelap);
+    width: 50px;
+    height: 50px;
+}
+
+#navbar.scrolled svg path {
+    fill: var(--putih-gelap); /* Warna saat scroll */
+}
+
+
+nav i {
+    transition: color 0.4s ease;
+    color: var(--biru-gelap);
+}
+
+nav.scrolled i {
+    color: var(--putih-gelap);
+}
+
+
+.menu-toggle {
+    display: none;
+    padding-left: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    /* color: white; */
+}
+
+.menu-toggle i {
+    color: var(--biru-mid);
+}
+
+nav ul {
+    width: 100%;
+    /* border: 1px solid #000; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0 15px 0 15px;
+}
+
+nav ul li{
+    transition: .2s ease-out;
+}
+
+nav ul li a {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 13px;
+    text-align: justify;
+    text-decoration: none;
+    /* border: 1px solid #000; */
+}
+
+nav ul img {
+    width: 50px;
+    height: 50px;
+    object-fit: fill;
+}
+
+nav ul li:hover {
+    transform: scale(110%);
+    opacity: 70%;
+    transition: .2s ease-out;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--biru-highlight);
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: var(--biru-gelap);
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+
+/* NAV END */
+
+
+/* CONTAINER START */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 1px solid #000; */
+}
+
+.inner-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 50px 10px 50px;
+    border-radius: 10px;
+    /* border: 1px solid #000; */
+    
+}
+
+/* CONTAINER END */
+
+/* FOOTER START */
+
+footer {
+    margin-top: 10px;
+    height: auto;
+    /* border: 1px solid #000; */
+}
+
+.content-section h3 {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--putih-gelap);
+}
+
+.content-section p {
+    font-family: "Istok Web", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--putih-gelap);
+    font-size: 12px;
+}
+
+.content-section a {
+    font-family: "Istok Web", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--putih-gelap);
+    font-size: 12px;
+}
+
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Supaya elemen bisa turun ke bawah jika tidak cukup lebar */
+    height: 100%;
+    /* border: 1px solid #000; */
+    align-items: stretch; /* Biar tinggi semua elemen sama */
+    background-color: var(--biru-mid);
+    margin: 0 50px;
+    border-radius: 10px;
+    padding: 20px; /* Tambahkan padding agar lebih rapi */
+}
+
+/* BAGIAN COPYRIGHT */
+.copyright-section {
+    display: grid;
+    place-content: center;
+    color: var(--biru-mid);
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    height: 2em;
+    text-align: center;
+}
+
+/* BAGIAN LOGO */
+.content-logo {
+    width: 10%;
+    padding: 50px 0;
+    height: 90%;
+    display: grid;
+    place-content: center;
+}
+
+.content-logo svg path {
+    fill: var(--putih-gelap);
+}
+
+/* BAGIAN LOKASI */
+.content-location {
+    width: 20%;
+    height: 90%;
+    /* border: 1px solid #000; */
+}
+
+/* BAGIAN SOSIAL MEDIA */
+.content-social-media {
+    width: 30%;
+    height: 90%;
+    /* border: 1px solid #000; */
+}
+
+.spacer{
+    height: 20px;
+}
+
+.content-social-media .icons {
+    display: flex;
+
+}
+
+.content-social-media .icons i{
+    padding: 0 10px;
+    font-size: 25px;
+    color: #F2EFE7;
+}
+
+/* BAGIAN KONTAK */
+.content-contact {
+    width: 20%;
+    height: 90%;
+    /* border: 1px solid #000; */
+}
+
+
+/* FOOTER END */
+
+/* RESPONSIVE SECTION */
+
+@media (max-width: 768px) {
+    header {
+        max-width: 768px ;
+    }
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4em;
+        border-radius: 10px;
+        background-color: rgba(69, 151, 152, 0); /* Gunakan RGBA dengan alpha 0 */
+        /* border: 1px solid #000; */ 
+        margin: 0px 50px 0px 50px;
+        z-index: 1000;
+        padding: 15px 20px; /* Jangan terlalu kecil */
+        transition: padding 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), 
+                    background-color 0.4s ease, 
+                    color 0.4s ease;
+    }
+
+    #navbar.scrolled {
+
+        box-shadow: 0 5px 20px rgba(43, 110, 110, 0.377); 
+        padding: 10px 15px; /* Kurangi sedikit, tapi jangan terlalu drastis */
+    }
+
+    #navbar .menu-toggle i {
+        color: var(--biru-gelap);
+    }
+
+    #navbar.scrolled .menu-toggle i {
+        color: var(--putih-gelap);
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #f2efe764;
+        position:relative;
+        top: 200px;
+        right: 20px;
+        width: 100%;
+        padding: 10px;
+        /* transform: translateY(-30px); */
+        border-radius: 5px;
+        opacity: 0;
+        pointer-events: none;
+        animation: slideFadeIn 0.4s ease forwards;
+        transition: 0.4s ease;
+        backdrop-filter: blur(3px);
+    }
+
+    nav.scrolled ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1632576b;
+        opacity: 0;
+        transform: translateY(-30px);
+        pointer-events: none;
+        animation: slideFadeIn 0.4s ease forwards;
+        backdrop-filter: blur(3px);
+    }
+
+    nav.scrolled ul li a {
+        color: var(--putih-gelap);
+    }
+    
+    nav ul.active {
+        display: flex;
+        align-items: center;
+        min-height: 50vh; /* Biar penuh ke bawah */
+        /* box-shadow: 0 5px 20px rgba(43, 69, 110, 0.377); */
+        justify-content: space-between;
+        animation: slideFadeIn 0.4s ease forwards;
+        pointer-events: auto;
+    }
+
+    @keyframes slideFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* nav end */
+
+    /* footer start */
+
+    .content-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content-logo, .content-location, .content-social-media, .content-contact {
+        width: 90%;
+        margin-bottom: 15px;
+        height: auto;
+    }
+
+    .content-social-media .icons {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-logo img {
+        width: 80px;
+    }
+
+}

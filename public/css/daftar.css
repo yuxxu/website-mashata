@@ -1,0 +1,133 @@
+:root {
+    --biru-gelap: #3674B5;
+    /* rgb(54,116,181) */
+
+    --biru-mid: #578FCA;
+    /* rgb(87,143,202) */
+
+    --biru-terang: #A1E3F9;
+    --biru-highlight: #D1F8EF;
+    --putih-terang: #f4f1ea;
+    --putih-gelap: #F2EFE7;
+}
+
+#page-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--putih-gelap);
+}
+
+/* Inner content lebih kecil dan rapi */
+.inner-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--putih-terang);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+}
+
+.inner-content .left-section, 
+.inner-content .right-section {
+    width: 48%;
+}
+
+.right-section {
+    /* border: 1px solid #000; */
+    padding: 20px 0;
+}
+
+.text-area h3{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--biru-gelap);
+}
+
+.text-area p, .text-area b{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    padding-left: 10px;
+    color: var(--biru-gelap);
+}
+
+.input-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-area select {
+    width: 105%;
+}
+
+/* Styling input area */
+.input-area .input {
+    font-family: "Istok Web", sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--biru-gelap);
+    background-color: var(--putih-terang);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+label {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    color: var(--biru-gelap);
+}
+
+/* Styling tombol submit */
+.inner-content .left-section form button {
+    color: var(--putih-gelap);
+    text-decoration: none;
+}
+
+/* Styling tombol submit */
+.inner-content .left-section form button{
+    font-size: 16px;
+    padding: 15px;
+    width: 100%;
+    background-color: var(--biru-gelap);
+    border: none;
+    border-radius: 8px;
+    color: var(--putih-terang);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.inner-content .left-section form button:hover {
+    background-color: var(--biru-mid);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #page-one {
+        height: 60em;
+    }
+
+    .inner-content {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .inner-content .left-section, 
+    .inner-content .right-section {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0 ;
+    }
+}

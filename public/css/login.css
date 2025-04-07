@@ -1,0 +1,167 @@
+:root {
+    --biru-gelap: #3674B5;
+    /* rgb(54,116,181) */
+
+    --biru-mid: #578FCA;
+    /* rgb(87,143,202) */
+
+    --biru-terang: #A1E3F9;
+    --biru-highlight: #D1F8EF;
+    --putih-terang: #f4f1ea;
+    --putih-gelap: #F2EFE7;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    color: var(--biru-gelap);
+    background-color: var(--biru-gelap);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.inner-content {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background-color: var(--putih-terang);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+i {
+    color: var(--biru-gelap);
+}
+
+.left-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    /* border: 1px solid #000; */
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section img {
+    width: 80%;
+    height: 80%;
+    /* border: 1px solid black; */
+    object-position: center;
+    object-fit: cover;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.login-form input,
+.login-form button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: var(--biru-gelap);
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 15px;
+    color: var(--biru-gelap);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--biru-mid);
+    border-radius: 8px;
+}
+
+.login-form button {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: var(--biru-gelap);
+    color: var(--putih-gelap);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: var(--biru-mid);
+}
+
+.options {
+    display: grid;
+    width: 105%;
+    margin-top: 10px;
+    /* border: 1px solid #000; */
+}
+
+.options a {
+    text-decoration: none;
+    padding: 2px 0;
+    font-size: 12px;
+    color: var(--biru-gelap);
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .inner-content {
+        flex-direction: column;
+    }
+
+    .right-section {
+        display: none;
+    }
+}

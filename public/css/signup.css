@@ -1,0 +1,135 @@
+:root {
+    --biru-gelap: #3674B5;
+    /* rgb(54,116,181) */
+
+    --biru-mid: #578FCA;
+    /* rgb(87,143,202) */
+
+    --biru-terang: #A1E3F9;
+    --biru-highlight: #D1F8EF;
+    --putih-terang: #f4f1ea;
+    --putih-gelap: #F2EFE7;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    color: var(--biru-gelap);
+    background-color: var(--biru-gelap);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--biru-gelap);
+}
+
+.inner-content {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background-color: var(--putih-terang);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+i {
+    color: var(--biru-gelap);
+}
+
+.left-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid #000; */
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section img {
+    width: 80%;
+    height: 70%;
+    /* border: 1px solid black; */
+    object-position: center;
+    object-fit: cover;
+}
+
+.signup-form h2 {
+    margin-bottom: 20px;
+    color: var(--biru-gelap);
+}
+
+.signup-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 15px;
+    color: var(--biru-gelap);
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--biru-mid);
+    border-radius: 8px;
+}
+
+.signup-form button {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+    width: 105%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: var(--biru-gelap);
+    color: var(--putih-gelap);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: var(--biru-mid);
+}
+
+.options {
+    display: grid;
+    width: 105%;
+    margin-top: 10px;
+    /* border: 1px solid #000; */
+}
+
+.options a {
+    text-decoration: none;
+    padding: 2px 0;
+    font-size: 12px;
+    color: var(--biru-gelap);
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .inner-content {
+        flex-direction: column-reverse;
+    }
+
+    .right-section {
+        display: none;
+    }
+}
