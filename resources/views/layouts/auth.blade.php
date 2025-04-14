@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@0,400;0,700&family=Poppins:wght@100;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="{{ asset('css/signup.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="https://website-mashata-production.up.railway.app/css/signup.css">
+    <link rel="stylesheet" href="https://website-mashata-production.up.railway.app/css/login.css">
+
     <title>@yield('title', 'MasHata')</title>
 </head>
 
