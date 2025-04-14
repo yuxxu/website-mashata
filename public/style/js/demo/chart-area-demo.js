@@ -1,39 +1,31 @@
-// Set new default font family and font color to mimic Bootstrap's default styling
+// Set default font family and font color to mimic Bootstrap's default styling
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
 
-function number_format(number, decimals, dec_point, thousands_sep) {
-  // *     example: number_format(1234.56, 2, ',', ' ');
-  // *     return: '1 234,56'
-  number = (number + '').replace(',', '').replace(' ', '');
-  var n = !isFinite(+number) ? 0 : +number,
-    prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
-    sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
-    dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
-    s = '',
-    toFixedFix = function(n, prec) {
-      var k = Math.pow(10, prec);
-      return '' + Math.round(n * k) / k;
-    };
-  // Fix for IE parseFloat(0.55).toFixed(0) = 0;
-  s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+// Format angka
+function number_format(number, decimals = 0, dec_point = '.', thousands_sep = ',') {
+  number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
+  let n = isFinite(+number) ? +number : 0;
+  let prec = Math.abs(decimals);
+  let s = (prec ? (Math.round(n * Math.pow(10, prec)) / Math.pow(10, prec)) : Math.round(n)).toString().split('.');
+
   if (s[0].length > 3) {
-    s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+    s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, thousands_sep);
   }
   if ((s[1] || '').length < prec) {
-    s[1] = s[1] || '';
-    s[1] += new Array(prec - s[1].length + 1).join('0');
+    s[1] = (s[1] || '') + '0'.repeat(prec - s[1].length);
   }
-  return s.join(dec);
+  return s.join(dec_point);
 }
 
-// Area Chart Example
+// Chart logic
 document.addEventListener("DOMContentLoaded", function () {
   fetch("/admin/chart-data")
     .then(response => response.json())
     .then(data => {
-      var ctx = document.getElementById("myAreaChart");
-      var myLineChart = new Chart(ctx, {
+      const ctx = document.getElementById("myAreaChart");
+
+      new Chart(ctx, {
         type: 'line',
         data: {
           labels: ["Belum Check-Up", "Sedang Check-Up", "Selesai"],
@@ -51,11 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
             pointHitRadius: 10,
             pointBorderWidth: 2,
             data: [
-              data.belum_checkup, 
-              data.sedang_checkup, 
-              data.sudah_checkup
+              data.belum_checkup || 0,
+              data.sedang_checkup || 0,
+              data.sudah_checkup || 0
             ],
-          }],
+          }]
         },
         options: {
           maintainAspectRatio: false,
@@ -81,9 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
               ticks: {
                 maxTicksLimit: 5,
                 padding: 10,
-                callback: function (value, index, values) {
-                  return number_format(value);
-                }
+                callback: value => number_format(value)
               },
               gridLines: {
                 color: "rgb(234, 236, 244)",
@@ -92,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 borderDash: [2],
                 zeroLineBorderDash: [2]
               }
-            }],
+            }]
           },
           legend: {
             display: false
@@ -112,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
             mode: 'index',
             caretPadding: 10,
             callbacks: {
-              label: function (tooltipItem, chart) {
-                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+              label: (tooltipItem, chart) => {
+                const datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
                 return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
               }
             }
@@ -121,5 +111,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     })
-    .catch(error => console.error('Error fetching data:', error));
+    .catch(error => console.error('Error fetching chart data:', error));
 });

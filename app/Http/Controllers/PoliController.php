@@ -78,5 +78,25 @@ class PoliController extends Controller
     
         return redirect()->route('poli.index')->with('success', 'Poli berhasil diperbarui');
     }    
+
+    public function destroy($id)
+    {
+        $poli = Poli::findOrFail($id);
+    
+        if ($poli->antrian()->exists()) {
+            return redirect()->back()->with('error', 'Tidak bisa menghapus poli yang memiliki antrian.');
+        }
+    
+        // Hapus gambar jika ada
+        if ($poli->image) {
+            Storage::delete('public/' . $poli->image);
+        }
+    
+        $poli->delete();
+    
+        return redirect()->route('poli.index')->with('success', 'Poli berhasil dihapus.');
+    }
+    
+
 }
 

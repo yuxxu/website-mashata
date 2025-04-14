@@ -8,8 +8,8 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        {{-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> --}}
                     </div>
 
                     <!-- Content Row -->
@@ -25,7 +25,7 @@
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $totalPasien }}</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            {{-- <i class="fas fa-calendar fa-2x text-gray-300"></i> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $sudahCheckup }}</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                            {{-- <i class="fas fa-dollar-sign fa-2x text-gray-300"></i> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -61,17 +61,17 @@
                                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $sedangCheckup }}</div>
                                                 </div>
                                                 <div class="col">
-                                                    <div class="progress progress-sm mr-2">
+                                                    {{-- <div class="progress progress-sm mr-2">
                                                         <div class="progress-bar bg-info" role="progressbar"
                                                             style="width: {{ $totalPasien > 0 ? ($sedangCheckup / $totalPasien) * 100 : 0 }}%" 
                                                             aria-valuenow="{{ $sedangCheckup }}" aria-valuemin="0"
                                                             aria-valuemax="{{ $totalPasien }}"></div>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                            {{-- <i class="fas fa-clipboard-list fa-2x text-gray-300"></i> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $belumCheckup }}</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                            {{-- <i class="fas fa-comments fa-2x text-gray-300"></i> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -124,20 +124,10 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Antrian Per Poli</h6>
                                     <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
+                                        
+                                        
                                     </div>
                                 </div>
                                 <!-- Card Body -->
@@ -146,15 +136,7 @@
                                         <canvas id="myPieChart"></canvas>
                                     </div>
                                     <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
+                                        
                                     </div>
                                 </div>
                             </div>

@@ -22,13 +22,14 @@ class PasswordResetController extends Controller
     public function sendResetLink(Request $request)
     {
         $request->validate(['email' => 'required|email']);
-
+    
         $status = Password::sendResetLink($request->only('email'));
-
+    
         return $status === Password::RESET_LINK_SENT
-            ? back()->with(['success' => __($status)])
+            ? back()->with(['success' => 'Kami telah mengirim kode verifikasi. Silakan cek email-mu.'])
             : back()->withErrors(['email' => __($status)]);
     }
+    
 
     // 3️⃣ Menampilkan Form Reset Password
     public function showResetForm($token)

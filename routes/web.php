@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view ('landingpage');
 });
 
+Route::get('/test', function () {
+    return 'Hosting berhasil!';
+});
+
+
 Route::get('/dashboard', function () {
     if (!Auth::check() || Auth::user()->role !== 'admin') {
         return redirect('/')->with('error', 'Akses ditolak.');
@@ -28,9 +33,18 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::get('/admin/chart-data', [DashboardController::class, 'getChartData'])->name('chart.data');
 
 Route::get('/admin/antrian', [AdminAntrianController::class, 'adminIndex'])->name('admin.antrian');
-
+Route::get('/admin/antrian/create', [AdminAntrianController::class, 'create'])->name('admin.antrian.create');
+Route::post('/admin/antrian/store', [AdminAntrianController::class, 'store'])->name('admin.antrian.store');
+Route::get('/admin/antrian/{id}/edit', [AdminAntrianController::class, 'edit'])->name('admin.antrian.edit');
+Route::put('/admin/antrian/{id}', [AdminAntrianController::class, 'update'])->name('admin.antrian.update');
 Route::put('/admin/antrian/{id}/status', [AdminAntrianController::class, 'updateStatus'])->name('ubah.status');
+Route::post('/reset-antrian', [AdminAntrianController::class, 'resetAntrian'])->name('admin.reset-antrian');
+Route::get('/admin/antrian/download', [AdminAntrianController::class, 'downloadCsv'])->name('admin.antrian.download');
+Route::delete('/poli/{id}', [PoliController::class, 'destroy'])->name('poli.destroy');
 
+
+
+Route::get('/chart/pasien-per-poli', [DashboardController::class, 'getPasienPerPoli']);
 
 Route::get('/admin/poli', [PoliController::class, 'index'])->name('poli.index');
 Route::get('/admin/poli/create', [PoliController::class, 'create'])->name('poli.create');

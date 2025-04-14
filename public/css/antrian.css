@@ -7,22 +7,43 @@
 
     --biru-terang: #A1E3F9;
     --biru-highlight: #D1F8EF;
-    --putih-terang: #f4f1ea;
+    --putih-terang: #fffdf8;
     --putih-gelap: #F2EFE7;
     --putih-hover: #e5e1d6;
 }
 
-#page-one{
-    height: 35em;
-    /* border: 1px solid #000; */
-    margin-top: 100px;
+#page-three{
+    height: 30em;
+    margin-bottom: 30px;
+}
+
+nav{
+    margin-bottom: 30px;
+}
+
+nav a{
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: var(--biru-mid);
+    text-decoration: none;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    transition: 0.4s ease;
+    color: var(--putih-gelap);
+}
+
+nav a:hover{
+    transition: 0.4s ease;
+    background-color: var(--biru-gelap);
 }
 
 .title {
     /* border: 1px solid #ea2424; */
     font-family: "Poppins", serif;
     width: 100%;
-    padding: 20px 90px;
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
@@ -32,10 +53,9 @@
 
 .inner-content {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 90%;
-    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
     /* border: 1px solid #000; */
     justify-content: space-between;
 }
@@ -59,7 +79,6 @@ select {
     font-family: "Poppins", serif;
     font-weight: 700;
     font-style: normal;
-    margin: 10px;
     width: 100%;
     padding: 10px;
     border-radius: 10px;
@@ -73,6 +92,7 @@ select {
     display: flex;
     align-items: center;
     /* border: 1px solid #000; */
+    margin: 20px 0;
     justify-content: space-between;
 }
 
@@ -83,7 +103,6 @@ select {
     /* border: 1px solid #000; */
     border-radius: 10px;
     padding: 0 20px;
-    margin: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -117,7 +136,6 @@ select {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -146,7 +164,7 @@ table tr:nth-child(even) {
 }
 
 table tr:hover {
-    background: var(--putih-hover);
+    background: var(--putih-terang);
     transition: .4s ease;
 }
 
@@ -160,25 +178,27 @@ td {
 
 @media (max-width: 768px) { 
 
-    .container {
-        height: 35em;
-        /* margin-top: 200px; */
-        margin-bottom: 200px;
+    #page-three{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        
     }
 
     .inner-content {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
+    }
 
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .stat-card {
         display: flex;
+        width: 35%;
         /* border: 1px solid #000; */
         border-radius: 10px;
         padding: 0 20px;
-        margin: 10px;
+        margin: 10px 0;
         justify-content: center;
         align-items: center;
     }
@@ -195,7 +215,7 @@ td {
         font-family: "Poppins", serif;
         font-weight: 600;
         font-style: normal;
-        font-size: 25px;
+        font-size: 15px;
     }
     .stat-card p{
         color: var(--biru-gelap);

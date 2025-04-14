@@ -382,6 +382,38 @@
 
 /* PAGE FOUR END */
 
+/* PAGE FIVE START */
+
+#page-five {
+    /* border: 1px solid #000; */
+    height: 22em;
+    margin-bottom: 30px;
+}
+
+#page-five .inner-content {
+    background-color: var(--biru-gelap);
+}
+
+#page-five .right-section .text-area h3 {
+    font-size: 17px;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--putih-gelap);
+    /* border: 1px solid #000; */
+}
+
+#page-five .right-section .text-area a {
+    font-size: 15px;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--putih-gelap);
+    /* border: 1px solid #000; */
+}
+
+/* PAGE FIVE END */
+
 
 /* responsive section */
 

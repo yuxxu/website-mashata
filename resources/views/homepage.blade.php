@@ -88,7 +88,7 @@
     </div>
 
     <!-- Page Four: Panduan -->
-     <div class="container" id="page-four">
+    <div class="container" id="page-four">
         <div class="inner-content">
             <section class="left-section">
                 <div class="text-area">
@@ -118,6 +118,24 @@
                 <div class="text-area">
                     <h3>Datang ke Puskesmas</h3>
                     <p>Tunjukkan kode booking atau bukti pendaftaran di loket pendaftaran saat datang ke Puskesmas.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Page Five: Antrian -->
+        <div class="container" id="page-five">
+        <div class="inner-content">
+            <section class="left-section">
+                <div class="text-area">
+
+                </div>
+            </section>
+
+            <section class="right-section">
+                <div class="text-area">
+                    <h3>Lihat Antrian</h3>
+                    <a href="/antrian">Lihat Antrian Disini !</a>
                 </div>
             </section>
         </div>

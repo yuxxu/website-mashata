@@ -5,9 +5,14 @@
         <div class="inner-content">
             <div class="left-section">
                 <h2>Reset Password</h2>
+
+                {{-- Alert Success --}}
                 @if (session('status'))
-                    <p>{{ session('status') }}</p>
+                    <div class="alert alert-success" style="margin-bottom: 15px;">
+                        {{ session('status') }}
+                    </div>
                 @endif
+
                 <form class="login-form" action="{{ route('password.email') }}" method="POST">
                     @csrf
                     <label for="email">Email:</label>

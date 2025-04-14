@@ -8,11 +8,6 @@ use Illuminate\Console\Scheduling\Schedule; // pastikan ini ada di atas
 
 class Kernel extends HttpKernel
 {
-    protected function schedule(Schedule $schedule)
-{
-    $schedule->command('reset:antrian')->dailyAt('00:00');
-}
-
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
@@ -45,5 +40,11 @@ class Kernel extends HttpKernel
     protected $commands = [
         \App\Console\Commands\ResetAntrian::class,
     ];
+
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule->command('reset:antrian')->everyMinute();
+
+    }
     
 }

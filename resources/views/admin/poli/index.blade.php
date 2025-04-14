@@ -30,6 +30,11 @@
                                 <td>{{ $poli->nama_poli }}</td>
                                 <td>
                                     <a href="{{ route('poli.edit', $poli->id) }}" class="btn btn-warning">Edit</a>
+                                    <form action="{{ route('poli.destroy', $poli->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Yakin ingin menghapus poli ini?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Hapus</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

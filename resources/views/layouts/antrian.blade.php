@@ -18,12 +18,9 @@
     <title>MasHata</title>
 </head>
 
-<body> 
-    <x-navbar></x-navbar>
+<body>
 
     @yield('content')
-
-    <x-footer></x-footer>
 
 </body>
 
