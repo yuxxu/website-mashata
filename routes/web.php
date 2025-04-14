@@ -12,10 +12,22 @@ use App\Http\Controllers\PasswordResetController;
 use App\Http\Controllers\UserController;
 use App\Models\Antrian;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 Route::get('/', function () {
     return view ('landingpage');
 });
+
+Route::get('/tes-db', function () {
+    try {
+        DB::connection()->getPdo();
+        return "Database connected!";
+    } catch (\Exception $e) {
+        return $e->getMessage();
+    }
+});
+
 
 Route::get('/test', function () {
     return 'Hosting berhasil!';
