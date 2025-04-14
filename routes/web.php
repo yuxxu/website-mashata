@@ -21,12 +21,13 @@ Route::get('/', function () {
 
 Route::get('/tes-db', function () {
     try {
-        DB::connection()->getPdo();
-        return "Database connected!";
+        $databaseConnection = DB::connection()->getPdo();
+        return 'Koneksi ke database berhasil!';
     } catch (\Exception $e) {
-        return $e->getMessage();
+        return 'Error: ' . $e->getMessage();
     }
 });
+
 
 
 Route::get('/test', function () {
