@@ -184,9 +184,6 @@ td {
         
     }
 
-    .inner-content {
-    }
-
     .stats {
         display: flex;
         flex-wrap: wrap;
