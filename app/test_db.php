@@ -1,22 +1,34 @@
 <?php
 
-// Load Composer's autoloader
+// Autoload Composer
 require_once __DIR__.'/../vendor/autoload.php';
 
-// Bootstrap Laravel
-$app = require_once __DIR__.'/../bootstrap/app.php';
+// Inisialisasi Capsule (Database Manager)
+use Illuminate\Database\Capsule\Manager as Capsule;
 
-// Set up the Laravel environment (optional, if not set up)
-$kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
+$capsule = new Capsule;
 
-// Ensure DB facade is accessible
-use Illuminate\Support\Facades\DB;
+// Konfigurasi koneksi database menggunakan .env
+$capsule->addConnection([
+    'driver' => 'mysql',
+    'host' => 'centerbeam.proxy.rlwy.net',
+    'port' => 50611,
+    'database' => 'railway',
+    'username' => 'root',
+    'password' => 'mppEgkgjLMWVHwwXezpuFBtglJzDLmvK',
+    'charset' => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix' => '',
+]);
+
+// Menginisialisasi Eloquent dan mengaktifkan database
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
 
 try {
-    // Example database query to test the connection
-    $result = DB::select("SELECT * FROM users LIMIT 1");
-    echo "Database connection successful. Query result: ";
-    print_r($result);
+    // Coba koneksi ke database
+    $result = Capsule::connection()->getPdo();
+    echo "Koneksi ke database berhasil!";
 } catch (Exception $e) {
     echo "Koneksi ke database gagal: " . $e->getMessage();
 }
