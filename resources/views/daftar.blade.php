@@ -7,7 +7,7 @@
                 <div class="text-area">
                     <h3>Daftar Konsultasi {{ $poli->nama_poli }}</h3>
                 </div>
-                <form action="{{ route('daftar.pasien') }}" method="POST">
+                <form action="{{ route('daftar.pasien', [], true) }}" method="POST">
                     @csrf
                     <div class="input-area">
                     <input type="hidden" name="poli_id" value="{{ $poli->id }}">
