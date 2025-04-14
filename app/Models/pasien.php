@@ -4,12 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Antrian; // ✅ Tambahkan ini
+use App\Models\User;
 
 class Pasien extends Model
 {
     use HasFactory;
 
-    protected $table = 'pasien'; // Nama tabel dalam database
+    protected $table = 'pasien';
 
     protected $fillable = [
         'user_id',
@@ -21,17 +23,13 @@ class Pasien extends Model
         'no_hp'
     ];
 
-    // Relasi ke User
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    // Relasi ke Antrian
     public function antrian()
     {
         return $this->hasOne(Antrian::class, 'pasien_id');
     }
 }
-
-
