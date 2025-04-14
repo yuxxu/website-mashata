@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="https://website-mashata-production.up.railway.app/css/landing.css">
     <link rel="stylesheet" href="https://website-mashata-production.up.railway.app/css/global.css">
 
-    <script src="{{ asset('js/navbar.js') }}"></script>
+    <script src="{{ secure_asset('js/navbar.js') }}"></script>
+
     <title>@yield('title', 'MasHata')</title>
 </head>
 

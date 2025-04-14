@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://website-mashata-production.up.railway.app/css/home.css">
     <link rel="stylesheet" href="https://website-mashata-production.up.railway.app/css/global.css">
-    <script src="{{ asset('js/navbar.js') }}"></script>
+    <script src="{{ secure_asset('js/navbar.js') }}"></script>
     <title>@yield('title', 'MasHata')</title>
 </head>
 
@@ -25,7 +25,7 @@
     <x-footer></x-footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="{{ asset('js/swiper.js') }}"></script>
+    <script src="{{ secure_asset('js/swiper.js') }}"></script>
 
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function () {
