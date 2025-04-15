@@ -31,8 +31,7 @@
                             @foreach ($poliChunk as $poli)
                                 <div class="card">
                                     <div class="card-image">
-                                        <img src="https://website-mashata-production.up.railway.app/asset/images/poli_images/poli-gigi.png" alt="Poli Gigi">
-
+                                        <img src="{{ asset('asset/images/poli_images/' . $poli->image) }}" alt="{{ $poli->nama_poli }}">
                                     </div>
                                     <div class="card-content">
                                         <h3>{{ $poli->nama_poli }}</h3>
