@@ -392,6 +392,7 @@
 
 #page-five .inner-content {
     background-image: url("/asset/images/bg/bg-antrian.png");
+    background-size: cover;
 }
 
 #page-five .right-section .text-area h3 {
