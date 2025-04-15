@@ -361,7 +361,7 @@ footer {
         position: absolute;
         top: 120px;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-10%);
         width: 90%; /* Lebar tetap besar */
         max-width: 500px; /* Biar nggak terlalu gede di layar lebar */
         padding: 10px;
