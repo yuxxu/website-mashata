@@ -100,7 +100,7 @@
             <section class="right-section">
                 <div class="text-area">
                     <h3>Akses Website</h3>
-                    <p>Buka website resmi Puskesmas di [www.puskesmasbooking.com]</p>
+                    <p>Buka website resmi Puskesmas di [website-mashata-production.up.railway.app]</p>
                 </div>
                 <div class="text-area">
                     <h3>Pilih Layanan</h3>

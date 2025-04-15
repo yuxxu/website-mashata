@@ -6,24 +6,22 @@
 
             <div class="content-location">
                 <h3>Lokasi Kami</h3>
-                <p>Jl. Merdeka No. 45, Kelurahan Sukamaju, Kecamatan Cempaka, Kabupaten Serang, Banten, 42115</p>
-                <p><a href="">Dapatkan Arah <i class="fa-solid fa-arrow-right"></i> </a></p>
+                <p>Jl. DI Panjaitan No.128, Karangreja, Purwokerto Kidul, Kec. Purwokerto Sel., Kabupaten Banyumas, Jawa Tengah 53141</p>
+                <p><a href="https://maps.app.goo.gl/hhCWTvkSDhSzGnz86">Dapatkan Arah <i class="fa-solid fa-arrow-right"></i> </a></p>
             </div>
 
             <div class="content-social-media">
                 <h3>Bergabung Dengan Kami</h3>
 
                 <div class="icons">
-                    <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.instagram.com/mashata461?igsh=MWJ3eTczMjVqNWhqdg=="><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
 
             <div class="content-contact">
                 <h3>Punya Pertanyaan?</h3>
                 <p>Silahkan ajukan pertanyaan, kami dengan senang hati akan meresponnya</p>
-                <a href="">Hubungi Kami <i class="fa-solid fa-phone"></i></a>
+                <a href="https://wa.me/+6285647363197">Hubungi Kami <i class="fa-solid fa-phone"></i></a>
             </div>
         </section>
         <section class="copyright-section">

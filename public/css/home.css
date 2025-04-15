@@ -391,7 +391,7 @@
 }
 
 #page-five .inner-content {
-    background-color: var(--biru-gelap);
+    background-image: url("/asset/images/bg/bg.png");
 }
 
 #page-five .right-section .text-area h3 {
