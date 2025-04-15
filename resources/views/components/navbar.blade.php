@@ -11,7 +11,7 @@
                 <li>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <button type="submit" class="dropdown-item" style="background: #3674B5; border: none; padding: 0; color: #F2EFE7; cursor: pointer;">
+                        <button type="submit" class="dropdown-item" style="background: #3674B5; border-radius:6px;  border: none; padding: 10px; color: #F2EFE7; cursor: pointer;    font-family: 'Poppins', serif; font-weight: 500; font-style: normal;">
                             Logout
                         </button>
                     </form>
